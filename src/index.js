@@ -9,7 +9,10 @@ import Index from "views/Index.js";
 import RegisterPage from "views/examples/RegisterPage.js";
 import Game from 'views/examples/Game'
 import ScoreBoard from './views/examples/ScoreBoard'
+import axios from 'axios';
 
+axios.defaults.xsrfCookieName = 'csrftoken'
+axios.defaults.xsrfHeaderName = 'X-CSRFToken'
 ReactDOM.render(
   <BrowserRouter>
     <Switch>
